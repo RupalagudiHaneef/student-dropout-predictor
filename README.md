@@ -1,31 +1,11 @@
-# Student Dropout Risk Predictor
+# 1. Clone the repository
+git clone https://github.com/RupalagudiHaneef/student-dropout-predictor
 
-A machine learning web application that predicts whether a student will 
-Drop Out, Stay Enrolled, or Graduate based on academic and financial factors.
+# 2. Navigate into the folder
+cd student-dropout-predictor
 
-## Live App
-[Click here to open the app](https://student-dropout-predictor-zrxsfxmbifcja6thbbf5dg.streamlit.app)
-
-## Project Overview
-- Dataset: 4424 students, 35 features
-- Model: XGBoost Classifier
-- Accuracy: 77.4%
-
-## Key Findings
-- Students with 2nd semester approved subjects below 5 are at high dropout risk
-- Unpaid tuition fees is a strong dropout indicator
-- Academic performance outweighs financial factors in prediction
-
-## Tech Stack
-- Python
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- Scikit-learn, XGBoost
-- Streamlit
-
-## How to Run Locally
+# 3. Install dependencies
 pip install -r requirements.txt
-streamlit run app.py
 
-## Author
-Haneef Rupalagudi
+# 4. Run the app
+streamlit run app.py
