@@ -1,102 +1,112 @@
-# 🎓 Student Dropout Risk Predictor
+# Student Dropout Risk Predictor
 
-A machine learning web application that predicts whether a student will **Drop Out**, **Stay Enrolled**, or **Graduate** — based on academic, financial, and demographic factors.
+A machine-learning web application that estimates whether a student is likely to **drop out, remain enrolled, or graduate** using academic, financial, and demographic information.
 
-> Built to help educational institutions identify at-risk students early and take timely action.
+The project demonstrates an end-to-end ML workflow: data preparation, model training, evaluation, and deployment through Streamlit.
 
----
-
-## 🔗 Live Demo
+## Live application
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://student-dropout-predictor-zrxsfxmbifcja6thbbf5dg.streamlit.app)
 
----
+## Project at a glance
 
-## 📌 Project Overview
-
-| Detail | Value |
+| Item | Details |
 |---|---|
-| Dataset Size | 4,424 students |
-| Features | 35 academic, financial & demographic |
+| Dataset | 4,424 student records |
+| Input features | 35 |
 | Model | XGBoost Classifier |
-| Accuracy | 77.4% |
-| Deployment | Streamlit Cloud |
-
----
-
-## 📁 Project Structure
-
-```
-student-dropout-predictor/
-│
-├── app.py                  # Streamlit UI — main entry point
-│
-├── model/
-│   ├── train_model.py      # Model training & hyperparameter tuning
-│   ├── predict.py          # Prediction logic (loads model & returns output)
-│   └── model.pkl           # Saved trained XGBoost model
-│
-├── data/
-│   ├── raw_data.csv        # Original dataset (4424 records, 35 features)
-│   └── processed_data.csv  # Cleaned & encoded dataset
-│
-├── notebooks/
-│   └── EDA.ipynb           # Exploratory Data Analysis notebook
-│
-├── utils/
-│   └── preprocessing.py    # Reusable data cleaning & encoding functions
-│
-├── requirements.txt        # All dependencies
-└── README.md               # You are here!
-```
-
----
-
-## 🔍 Key Findings
-
-- 📉 Students with fewer than **5 approved subjects in Semester 2** are at high dropout risk
-- 💸 **Unpaid tuition fees** is a strong standalone dropout indicator
-- 📚 **Academic performance outweighs financial factors** in overall prediction weight
-- 🎯 Early semester data is the most predictive — intervention works best in Semester 1–2
-
----
-
-## 🛠️ Tech Stack
-
-| Category | Tools |
-|---|---|
+| Reported accuracy | 77.4% |
+| Application | Streamlit |
 | Language | Python |
-| Data Processing | Pandas, NumPy |
-| Visualisation | Matplotlib, Seaborn |
-| Machine Learning | Scikit-learn, XGBoost |
-| Deployment | Streamlit, Streamlit Cloud |
-| Version Control | Git, GitHub |
 
----
+*The accuracy shown is the result reported for this project; performance can vary with data splits and evaluation conditions.*
 
-## ⚙️ How to Run Locally
+## Why this project?
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/RupalagudiHaneef/student-dropout-predictor
+Student attrition can affect learners and educational institutions. This application explores how historical student data can support early identification of students who may need additional academic or administrative support. Predictions should be treated as decision-support signals, not as final judgments about individual students.
 
-# 2. Navigate into the folder
-cd student-dropout-predictor
+## Technology stack
 
-# 3. Install dependencies
-pip install -r requirements.txt
+- **Python** — application and model workflow
+- **Pandas, NumPy** — data handling and preprocessing
+- **Scikit-learn, XGBoost** — model development and evaluation
+- **Matplotlib, Seaborn** — exploratory analysis and visualization
+- **Streamlit** — interactive web application
+- **Git, GitHub** — version control
 
-# 4. Run the app
-streamlit run app.py
+## Repository structure
+
+```text
+student-dropout-predictor/
+├── app.py
+├── model/
+│   ├── train_model.py
+│   ├── predict.py
+│   └── model.pkl
+├── data/
+│   ├── raw_data.csv
+│   └── processed_data.csv
+├── notebooks/
+│   └── EDA.ipynb
+├── utils/
+│   └── preprocessing.py
+├── requirements.txt
+└── README.md
 ```
 
+## Run locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/RupalagudiHaneef/student-dropout-predictor.git
+   cd student-dropout-predictor
+   ```
+
+2. Create and activate a virtual environment (recommended):
+
+   ```bash
+   python -m venv .venv
+   ```
+
+   Windows:
+   ```bash
+   .venv\Scripts\activate
+   ```
+
+   macOS/Linux:
+   ```bash
+   source .venv/bin/activate
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Start the application:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+## Responsible use
+
+- A model prediction is an estimate, not a certainty.
+- Use predictions alongside human review and relevant context.
+- Check data quality and model performance before using the system in a real institutional setting.
+- Do not use the output as the sole basis for consequential decisions about a student.
+
+## Author
+
+**Haneef Rupalagudi**  
+Python Developer | AI/ML Enthusiast
+
+- [GitHub](https://github.com/RupalagudiHaneef)
+- [LinkedIn](https://linkedin.com/in/haneef-rupalagudi-573b2b262)
+- [IEEE Xplore publication](https://ieeexplore.ieee.org/document/10864175)
+
 ---
 
-## 👤 Author
-
-**Haneef Rupalagudi**
-Python Developer & ML Engineer
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/haneef-rupalagudi-573b2b262)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/RupalagudiHaneef)
-[![IEEE](https://img.shields.io/badge/IEEE-Published-green)](https://ieeexplore.ieee.org/document/10864175)
+If you find this project useful, feel free to explore the code and share constructive feedback.
